@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.home.SearchActivity">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="10dp"
+        app:strokeWidth="0.5dp"
+        app:strokeColor="@color/blue"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginVertical="10dp"
+        android:layout_height="50dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_gravity="left"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:src="@drawable/left_arrow"
+                app:tint="@color/blue"
+                android:layout_marginLeft="25dp"
+                android:id="@+id/btn_back"
+                android:layout_height="match_parent"
+                android:layout_marginStart="25dp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:hint="Rechercher"
+                android:id="@+id/search"
+                android:textColor="@color/blue"
+                android:background="@drawable/search_edit_text"
+                android:textColorHint="@color/gray"
+                android:layout_marginLeft="20dp"
+                android:textSize="18sp"
+                android:focusable="true"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"/>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/positions_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:clipToPadding="false"/>
+
+</LinearLayout>

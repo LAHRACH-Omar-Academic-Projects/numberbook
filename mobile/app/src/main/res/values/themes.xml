@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.GeoLocation" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/black</item>
+        <item name="colorPrimaryVariant">@color/gray</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/blue</item>
+        <item name="colorSecondaryVariant">@color/blue_transparent</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <!-- Color Background. -->
+        <item name="android:colorBackground">@color/white</item>
+        <!-- Status bar color. -->
+        <!-- Customize your theme here. -->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="editTextTheme" parent="android:Widget.EditText">
+        <item name="android:textColor">?attr/colorPrimaryVariant</item>
+        <item name="android:textColorHint">?attr/colorPrimaryVariant</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:background">@drawable/edit_text_state</item>
+    </style>
+
+    <style name="spinnerTheme" parent="android:Widget.Spinner">
+        <item name="android:background">@drawable/spinner_state</item>
+        <item name="android:dividerHeight">1dp</item>
+        <item name="android:textColor">@color/blue</item>
+        <item name="android:popupBackground">?attr/colorOnPrimary</item>
+        <item name="android:scrollbarAlwaysDrawVerticalTrack">true</item>
+        <item name="android:dropDownSelector">?attr/colorOnPrimary</item>
+    </style>
+
+    <style name="navigationTheme" parent="Widget.Design.NavigationView">
+        <item name="itemBackground">@drawable/menu_item_state</item>
+        <item name="itemTextColor">?attr/colorSecondary</item>
+        <item name="itemIconTint">?attr/colorSecondary</item>
+    </style>
+</resources>

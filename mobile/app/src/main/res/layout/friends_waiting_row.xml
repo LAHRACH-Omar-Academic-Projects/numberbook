@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:cardElevation="2dp"
+    android:id="@+id/card"
+    app:cardBackgroundColor="@color/blue"
+    android:layout_marginHorizontal="15dp"
+    android:layout_marginTop="2dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="8dp"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/user_image"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            app:srcCompat="@drawable/user"
+            android:scaleType="centerCrop"
+            android:layout_marginVertical="10dp"
+            android:layout_marginHorizontal="10dp"
+            app:tint="@color/white"
+            />
+
+        <LinearLayout
+            android:layout_toRightOf="@+id/user_image"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_toEndOf="@+id/user_image">
+
+            <TextView
+                android:id="@+id/displayName"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="16dp"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/request_sent_btn"
+                    android:enabled="false"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cornerRadius="8dp"
+                    app:rippleColor="@color/green"
+                    app:strokeColor="@color/green"
+                    app:strokeWidth="2dp"
+                    android:text="Demande envoyée"
+                    android:textColor="@color/green"
+                    android:layout_margin="3dp"
+                    android:gravity="center_vertical|center_horizontal" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:enterFadeDuration="@android:integer/config_shortAnimTime"
+    android:exitFadeDuration="@android:integer/config_longAnimTime">
+    <item android:drawable="@drawable/edit_text_focused" android:state_focused="true" android:state_pressed="false"/>
+    <item android:drawable="@drawable/edit_text_enabled" android:state_enabled="true" android:state_pressed="false"  />
+    <item android:drawable="@drawable/edit_text_clicked" android:state_pressed="true"  android:state_enabled="true"  />
+</selector>

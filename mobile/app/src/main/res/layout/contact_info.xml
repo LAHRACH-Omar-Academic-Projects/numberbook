@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:cardElevation="0dp"
+    android:layout_marginHorizontal="15dp"
+    android:layout_marginTop="2dp"
+    app:cardBackgroundColor="@color/blue"
+    android:id="@+id/card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/user_image"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            app:srcCompat="@drawable/user"
+            android:scaleType="centerCrop"
+            android:layout_marginVertical="10dp"
+            android:layout_marginHorizontal="10dp"
+            app:tint="@color/white"
+            />
+
+        <LinearLayout
+            android:id="@+id/texts"
+            android:layout_toRightOf="@+id/user_image"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_toEndOf="@+id/user_image">
+
+            <TextView
+                android:id="@+id/displayName"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/add_friend_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ajouter un ami">
+
+                    <Button
+                        android:id="@+id/add_btn"
+                        style="?attr/materialButtonOutlinedStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:backgroundTint="@color/white"
+                        app:cornerRadius="8dp"
+                        app:rippleColor="@color/white"
+                        app:strokeColor="@color/blue"
+                        app:strokeWidth="2dp"
+                        android:text="Ajouter un ami"
+                        android:textColor="@color/blue"
+                        android:gravity="center_vertical|center_horizontal"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ProgressBar
+                        android:id="@+id/loader"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:indeterminate="true"
+                        android:indeterminateTint="@color/blue"
+                        android:indeterminateTintMode="src_in"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="@+id/add_btn"
+                        app:layout_constraintEnd_toEndOf="@+id/add_btn"
+                        app:layout_constraintStart_toStartOf="@+id/add_btn"
+                        app:layout_constraintTop_toTopOf="@+id/add_btn"
+                        android:elevation="8dp" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/request_sent"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/request_sent"
+            app:tint="@color/green"
+            android:layout_marginRight="8dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"/>
+
+    </RelativeLayout>
+</com.google.android.material.card.MaterialCardView>

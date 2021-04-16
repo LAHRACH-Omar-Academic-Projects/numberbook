@@ -1,0 +1,51 @@
+.CustomButton {
+    margin-top: 35px;
+    background-color: #5e72e4;
+    color: white;
+    padding: 10px 20px;
+    width: 350px;
+    text-align: center;
+    border: none;
+    border-radius: 4px;
+    height: 45px;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    box-sizing: border-box;
+    margin: auto;
+    display: flex;
+    justify-content: center;    
+    align-items: center;
+    outline: none;
+}
+
+.CustomButton-clicked {
+    margin-top: 35px;
+    color: white;
+    padding: 10px 20px;
+    width: 350px;
+    text-align: center;
+    border: none;
+    border-radius: 4px;
+    height: 45px;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    box-sizing: border-box;
+    margin: auto;
+    display: flex;
+    justify-content: center;    
+    align-items: center;
+    outline: none;
+    background-color: #002466;
+}
+
+.CustomButton:hover { 
+    background-color: #293eb4;
+    transition: 0.5s ease-in-out;
+}
+
+.CustomButton .Loader, .CustomButton-clicked .Loader {
+    transform: scale(0.5);
+    animation: fade 0.5s;
+}

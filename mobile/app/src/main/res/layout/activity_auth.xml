@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".ui.authentication.AuthActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="100dp"
+                android:textColor="@color/blue"
+                android:text="Inscrivez-vous"
+                android:textSize="35dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="match_parent"
+                android:paddingHorizontal="75dp"
+                android:paddingVertical="100dp">
+
+                <EditText
+                    android:id="@+id/prenom"
+                    style="@style/editTextTheme"
+                    android:textColor="@color/blue"
+                    android:inputType="textPersonName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:hint="Prénom"/>
+
+                <EditText
+                    android:id="@+id/nom"
+                    style="@style/editTextTheme"
+                    android:textColor="@color/blue"
+                    android:inputType="textPersonName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="10dp"
+                    android:hint="Nom"/>
+
+                <EditText
+                    android:id="@+id/email"
+                    style="@style/editTextTheme"
+                    android:textColor="@color/blue"
+                    android:inputType="textEmailAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="10dp"
+                    android:hint="Email"/>
+
+                <EditText
+                    android:id="@+id/dateNaissance"
+                    style="@style/editTextTheme"
+                    android:textColor="@color/blue"
+                    android:clickable="true"
+                    android:inputType="none"
+                    android:hint="Date de Naissance"
+                    android:focusable="false"
+                    android:layout_marginVertical="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Spinner
+                    android:id="@+id/sexe"
+                    style="@style/spinnerTheme"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:textColor="@color/blue"
+                    android:layout_marginVertical="10dp"
+                    android:spinnerMode="dropdown"
+                    android:entries="@array/sexe_array"/>
+
+                <Button
+                    android:id="@+id/suivant"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/blue"
+                    android:layout_gravity="end"
+                    android:text="SUIVANT" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

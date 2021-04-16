@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".ui.authentication.PhoneVerifyActivity">
+
+    <ScrollView
+        android:id="@+id/saisie_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="75dp"
+            android:paddingVertical="100dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="100dp"
+                android:textColor="@color/black"
+                android:text="Numéro de téléphone"
+                android:textSize="35dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/green"
+                android:text="Entrez le numéro de téléphone"
+                android:textSize="16dp"/>
+
+            <EditText
+                android:id="@+id/telephone"
+                style="@style/editTextTheme"
+                android:textColor="@color/orange"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:layout_marginVertical="15dp"
+                android:hint="Téléphone"/>
+
+            <Button
+                android:id="@+id/suivant"
+                android:backgroundTint="@color/blue"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:text="Suivant"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/verifier_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="75dp"
+            android:paddingVertical="100dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="100dp"
+                android:textColor="@color/blue"
+                android:text="Vérifier le numéro de mobile"
+                android:textSize="35dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:textColor="@color/gray"
+                android:text="Un code de vérification vous a été envoyé dans votre numéro de téléphone. Veuillez le saisir ci-dessous"
+                android:textSize="16dp"/>
+
+            <EditText
+                android:id="@+id/code"
+                style="@style/editTextTheme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:textColor="@color/green"
+                android:layout_marginVertical="15dp"
+                android:hint="Code de Vérification"/>
+
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/renvoyer"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cornerRadius="5dp"
+                    app:rippleColor="@color/orange_transparent"
+                    app:strokeColor="@color/orange"
+                    app:strokeWidth="2dp"
+                    android:text="Renvoyer"
+                    android:textColor="@color/orange"
+                    />
+
+                <Button
+                    android:id="@+id/verifier"
+                    android:backgroundTint="@color/blue"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="Vérifier"/>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/timer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="100dp"
+                android:textColor="@color/black"
+                android:text=""
+                android:textSize="18dp"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
